@@ -9,23 +9,45 @@ function getText() {
   //gettext.innerHTML = text;
   console.log(text_list);
   interval();
+  nextLetterDecorration()
 }
-var index = 0;
+var index = 1;
 document.addEventListener("keydown", function (event) {
+  var charElement = document.querySelector(".char" + index);
   if (event.key === save_list[0]) {
     index = index + 1;
     save_list.shift();
     console.log(event.code);
-    var charElement = document.querySelector(".char" + index);
+
     if (charElement) {
-      console.log(charElement);
-      charElement.style.color = "white";
+
       score_letter.push(1);
       timeWord();
-      console.log(score_letter.length);
+      nextLetterDecorration();
+      clearDecoration();
+      
     }
+  } else {
+    charElement.style.color = "red";
   }
 });
+
+var next_letter_decoration_index = 1;
+function nextLetterDecorration() {
+  nextLetterDecor = document.querySelector(".char" + next_letter_decoration_index);
+  next_letter_decoration_index = next_letter_decoration_index + 1;
+  nextLetterDecor.setAttribute("style", "text-decoration: underline #FF3028;text-underline-offset: 10px;");
+};
+
+var clear_index = 1;
+function clearDecoration() {
+  charElementClear = document.querySelector(".char" + clear_index);
+  clear_index = clear_index + 1;
+  charElementClear.setAttribute(
+    "style",
+    "color:white; text-decoration: none;text-underline-offset: 10px;"
+  );
+};
 
 var score_letter = [];
 function interval() {
