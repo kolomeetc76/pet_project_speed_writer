@@ -1,0 +1,58 @@
+.header {
+  width: 100%;
+  background-color: aqua;
+  height: 150px;
+  position: relative;
+}
+
+.menu {
+  position: relative;
+}
+.logo {
+  width: 12vh;
+  height: 12vh;
+  background-color: blue;
+}
+.keyboard-logo {
+  height: 6vh;
+}
+
+.text-content p {
+  font-size: 16pt;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 1pt;
+  word-spacing: 3pt;
+  text-align: center;
+  padding: 10vh;
+}
+.menu-ul {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+.content,
+p {
+  font-size: 30pt;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  height: 500px;
+  background-color: black;
+  color: white;
+  padding: 6vh;
+}
+
+.footer {
+  width: 100%;
+  background-color: black;
+  height: 150px;
+}
+
+.text {
+  color: gray !important;
+  text-align: justify;
+  line-height: 1.5;
+}
+#start {
+}
