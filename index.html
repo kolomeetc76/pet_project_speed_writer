@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="app.js"></script>
     <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="buttons.css">
-
+    <link rel="stylesheet" href="buttons.css" />
+    <link rel="stylesheet" href="menu.css" />
     <title>Проверь скорость печати</title>
   </head>
   <body>
@@ -14,42 +14,34 @@
     <script src="js/jquery.lettering.js"></script>
     <script src="time.js"></script>
     <div class="header">
-      <div class="menu">
-        <div class="logo">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="1em"
-            viewBox="0 0 576 512"
-            class="keyboard-logo"
-          >
-            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-            <path
-              d="M64 64C28.7 64 0 92.7 0 128V384c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64H64zm16 64h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V144c0-8.8 7.2-16 16-16zM64 240c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V240zm16 80h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V336c0-8.8 7.2-16 16-16zm80-176c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V144zm16 80h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V240c0-8.8 7.2-16 16-16zM160 336c0-8.8 7.2-16 16-16H400c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V336zM272 128h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V144c0-8.8 7.2-16 16-16zM256 240c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V240zM368 128h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H368c-8.8 0-16-7.2-16-16V144c0-8.8 7.2-16 16-16zM352 240c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H368c-8.8 0-16-7.2-16-16V240zM464 128h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H464c-8.8 0-16-7.2-16-16V144c0-8.8 7.2-16 16-16zM448 240c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H464c-8.8 0-16-7.2-16-16V240zm16 80h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H464c-8.8 0-16-7.2-16-16V336c0-8.8 7.2-16 16-16z"
-            />
-          </svg>
+      <div class="container-menu">
+        <div class="menu">
+          <li><a href="">Page 1</a></li>
+          <li><a href="">Page 2</a></li>
+          <li><a href="">Page 3</a></li>
+          <li><a href="">Page 4</a></li>
         </div>
-        <ul class="menu-ul">
-          <a href=""><li>Лучшие результаты</li></a>
-          <a href=""><li>О проекте</li></a>
-        </ul>
       </div>
     </div>
     <div class="container">
       <div class="content">
         <p>Готов начать? Нажми "старт".</p>
         <div id="letter-per-min"></div>
+        <div id="timer"></div>
         <div class="text-content">
-          <p class="text">Действительно ли нужно непрерывно саморазвиваться? Саморазвитие в современном мире считается практически обязательным занятием, особенно среди миллениалов: в США они стали основными потребителями различных обучающих курсов и полезных приложений и тратят на них до 300 долларов⁣ (27 713р.) в месяц. В России саморазвитие тоже популярно и общественно одобряемо: о своей готовности посвящать свободное время совершенствованию навыков и получению новых знаний рассказали 89% участников опроса сервиса Авито Работа</p>
+          <p id="text">
+            <script>
+              showText();
+            </script>
+          </p>
         </div>
       </div>
-      <div><button class="button_start" id="start" onclick="getText()">НАЧАТЬ</button></div>
-      
+      <div>
+        <button class="button_start" id="start" onclick="getText()">
+          НАЧАТЬ
+        </button>
+      </div>
     </div>
     <div class="footer"></div>
-    <script>
-      $(document).ready(function () {
-        $(".text").lettering();
-      });
-    </script>
   </body>
 </html>

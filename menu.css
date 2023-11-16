@@ -1,0 +1,32 @@
+.menu a:hover {
+  background: rgb(69, 0, 0);
+  color: white;
+}
+
+
+.container-menu {
+    width: 100%;
+}
+
+.menu {
+    display: table-cell;
+}
+a {
+  padding: 1em;
+  display: block;
+  color: gray;
+  border-right: 1px solid #b40000;
+  background: rgb(71, 71, 71);
+  text-decoration: none;
+  font-family: "Lora", serif;
+  transition: 0.5s linear;
+}
+
+li {
+  display: -webkit-flex;
+  display: inline-block;
+  background: #1b1b1b;
+  padding-left: 0;
+  list-style: none;
+  margin: 4vh;
+}
